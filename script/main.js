@@ -32,13 +32,14 @@ const loadDataOnDisplay = (data) => {
   console.log(getAiList[0]);
 
   getAiList.forEach((aiElement) => {
+    console.log(aiElement);
     const div = document.createElement("div");
     div.innerHTML = `
-    <div class="card max-w-fit bg-base-100 shadow-xl">
+    <div class="card bg-base-100 shadow-xl">
     <figure class="px-10 pt-10">
       <img
-        src="./assets/images/Rectangle 23.png"
-        alt="Shoes"
+        src="${aiElement.image}"
+        alt="Image Not Found"
         class="rounded-xl"
       />
     </figure>
