@@ -46,17 +46,15 @@ const loadDataOnDisplay = (data) => {
     <div class="card-body">
       <h2 class="card-title">Features</h2>
       <ol class="list-decimal ml-5">
-        <li>Natural language processing</li>
-        <li>Contextual understanding</li>
-        <li>Text generation</li>
+        ${aiElement?.features.map((item) => `<li>${item}</li>`).join("")}
       </ol>
       <hr />
       <div class="flex justify-between items-center">
         <div>
-          <h2 class="text-xl font-semibold">Chat GPT</h2>
+          <h2 class="text-xl font-semibold">${aiElement?.name}</h2>
           <div class="flex gap-2">
             <img src="./assets/images/date-icon.png" alt="" />
-            <span>11/01/2022</span>
+            <span>${aiElement?.published_in}</span>
           </div>
         </div>
         <img class="h-6 cursor-pointer" src="./assets/images/arrow.png" alt="" />
